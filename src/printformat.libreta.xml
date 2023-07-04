@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkformat>
+<title>Libreta de Ahorro</title>
+<page size="A4" marginLeft="0" marginRight="0" marginTop="0" marginBottom="0">
+   
+
+	<content>
+	
+	  <!-- Numero de cuenta -->
+		<text  size="10" offset="0" length="4" x="212" y="804">
+			<field >E01FMTBCC</field>
+	    </text>
+	    <text  size="10"  x="236" y="804">
+			<literal>-</literal>
+	    </text>
+	    <text size="10"  offset="4" length="4" x="242" y="804" >		 
+			<field>E01FMTBCC</field>
+        </text>
+	    <text  size="10"  x="266" y="804">
+			<literal>-</literal>
+	    </text>        
+        <text size="10"  offset="8" length="2" x="272" y="804" >
+			<field>E01FMTBCC</field>
+		</text>
+	    <text  size="10"  x="284" y="804">
+			<literal>-</literal>
+	    </text>		
+		<text size="10"  offset="10" length="10" x="290" y="804" >
+			<field>E01FMTBCC</field>
+		</text>
+		
+        <!-- Numero de libreta -->
+		<text size="8" x="264" y="766">
+		    <literal>N0. </literal>
+			<field>E01CUSPBN</field>
+		</text>
+		
+		<!-- Fecha -->
+		<text type="date" size="8" x="264" y="754">
+		    <literal>Fecha de Apertura: </literal>
+			<format>dd 'de' MMMM 'de' yyyy</format>
+			<field>E01CUSRDD</field>
+			<field>E01CUSRDM</field>
+			<field>E01CUSRDY</field>
+		</text>		
+		
+		<!--Titulares -->
+		<text size="8" x="4" y="770">
+			<field>E01CUSIDN</field>
+        </text>
+        <text size="8" x="59" y="770">
+			<field>E01CUSNA1</field>
+		</text>
+		<text size="8" x="4" y="760">
+			<field>E01CUSID1</field>
+        </text>
+		<text size="8" x="59" y="760">
+			<field>E01CUSTI1</field>
+		</text>
+		<text size="8" x="4" y="750">
+			<field>E01CUSID2</field>
+        </text>
+        <text size="8" x="59" y="750">
+			<field>E01CUSTI2</field>
+		</text>
+		
+		<text size="8" x="4" y="740">
+			<field>E01CUSID3</field>
+        </text>		
+        <text size="8" x="59" y="740">
+			<field>E01CUSTI3</field>
+		</text>
+	</content>		
+ </page>
+</checkformat>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkformat>
+<title>Official Check</title>
+<page size="A4" marginLeft="" marginRight="" marginTop="" marginBottom="">
+
+	<content>
+	    <!-- Numero de cheque -->
+		<text type="number" size="11" x="275" y="776" >
+			<field>E01OFMCKN</field>
+		</text>
+
+        <!-- Monto del cheque impreso en el cheque-->
+		<text size="11" x="415" y="780">
+		    <literal>*</literal>
+			<field>E01OFMAMT</field>
+			<literal>*</literal>
+		</text>
+
+        <!-- Nombre del beneficiario -->
+
+		<table columns="1" x="115" y="751" width="350">
+          <row type="static" >
+             <cell size="9" align="left">
+                 <literal>***</literal>
+                 <field length="30" nochar="*">E01OFMBNF</field>
+			     <field length="30" nochar="*">E01OFMBN1</field>
+			     <field length="30" nochar="*">E01OFMBN2</field>
+			     <literal>***</literal>
+			 </cell>    
+          </row>
+        </table>
+		
+		
+		
+		<!-- Cantidad en letras -->
+
+        <table columns="1" x="115" y="728" width="400">
+          <row type="static" >
+            <cell size="9" align="left">
+                 <literal>***</literal>
+                 <field>E01LETAMT</field>
+                 <literal>***</literal>
+            </cell>
+          </row>
+        </table>
+        
+        <!-- fecha del cheque -->
+        <table columns="2" x="56" y="700" width="260">
+         <row type="static" >
+          <cell size="8" align="right" >
+ 			  <field>D01OFMCTY</field>
+			  <literal>,</literal>
+ 		  </cell>
+ 		  <cell type="date" size="8" align="left">
+ 		   	  <format>dd 'de' MMMM 'de' yyyy</format>
+			  <field>E01OFMEM1</field>
+			  <field>E01OFMEM2</field>
+			  <field>E01OFMEM3</field>
+ 		  </cell>
+ 		  </row>
+        </table>
+
+	<!--	<text type="date" size="10" x="520" y="690">
+			<format>dd 'de' MMMM 'del' yyyy</format>
+			<field>E01OFMEM1</field>
+			<field>E01OFMEM2</field>
+			<field>E01OFMEM3</field>
+		</text>
+     -->
+		<!--
+		<text type="date" size="10" x="248" y="694">
+			<format>yy</format>
+			<field>E01OFMEM1</field>
+                        <field>E01OFMEM2</field>
+			<field>E01OFMEM3</field>
+		</text>
+         -->
+
+         <!-- Aplicante del cheque -->
+	      <text size="10" x="138" y="500">
+			<field length="30">E01OFMAPL</field>
+           <!-- <literal>#SPACE</literal>-->
+			<field length="30">E01OFMAP1</field>
+            <!--<literal>#SPACE</literal>-->
+			<field length="30">E01OFMAP1</field>
+		</text>	
+		
+		<!-- Cedula -->
+		<text size="10" x="445" y="500">
+			<field>E01OFMIDN</field>
+		</text>
+	    
+	    <!-- Concepto -->
+       <table columns="1" x="138" y="488" width="220">
+          <row type="static" >
+            <cell size="7" align="left">
+                 <field length ="70" fill="true">E01OFMCO1</field>
+                <!-- <literal>#SPACE</literal> -->
+                 <field length ="70" fill="true">E01OFMCO2</field>
+                <!-- <literal>#SPACE</literal>-->
+                 <field length ="70" fill="true">E01OFMCO3</field>
+            </cell>
+          </row>
+        </table>		
+			
+
+  
+        <!-- Telefono -->
+		<text size="10" x="445" y="470">
+			<field>E01OFMHPN</field>
+		</text>
+
+        <!-- Forma de pago -->
+		<text size="9" x="138" y="452">
+			<field>E01DEBCON</field>
+		</text>
+		<text size="10" x="138" y="404">
+            <if>
+				<operand>
+					<field>E01DEBACC</field>
+				</operand>
+				<operator>!=</operator>
+				<operand>
+					<literal></literal>				
+				</operand>
+			</if>
+			<literal>No.Cuenta :</literal>
+			<field>E01DEBACC</field>
+			<endif></endif>		
+		</text>
+		
+
+        <!-- Monto del cheque impreso en comprobante -->
+		<text size="10" x="415" y="444">
+			<literal>Bs.</literal>
+			<field>E01OFMAMT</field>
+		</text> 
+
+        <!-- Comision --> 
+		<text size="10" x="415" y="418">
+			<literal>Bs.</literal>
+			<field>E01OFMCOM</field>
+		</text>                
+
+        <!-- Monto total a cobrar al aplicante -->
+		<text size="10" x="415" y="382">
+			<literal>Bs.</literal>
+			<literal></literal>
+			<operation>
+				<operand>
+					<field>E01OFMAMT</field>
+				</operand>			
+				<operator>+</operator>
+				<operand>
+					<field>E01OFMCOM</field>
+				</operand>					
+			</operation>
+		</text>
+				
+		<text align="center" size="10" x="120" y="320" length="45" fill="false">
+			<field>H01USERID</field>
+			<field>H01TIMSYS</field>
+		</text>			
+	
+	</content>		
+</page>
+</checkformat>

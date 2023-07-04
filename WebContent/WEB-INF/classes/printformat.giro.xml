@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkformat>
+<title>Cheque de Gerencia</title>
+<page size="A4" marginLeft="0" marginRight="0" marginTop="0" marginBottom="0">
+
+	<content>
+	
+		<!-- Cheque original -->
+
+        <!-- Fecha del cheque -->
+        <table columns="1" x="435" y="785" width="260">
+        	<row type="static">
+ 				<cell type="date" size="10" align="left">
+ 					<format>dd 'de' MMMM 'de' yyyy</format>
+					<field>E01OFMEM1</field>
+					<field>E01OFMEM2</field>
+					<field>E01OFMEM3</field>
+ 				</cell>
+ 			</row>
+        </table>
+
+        <!-- Nombre del beneficiario -->
+		<table columns="1" x="140" y="740" width="350">
+          <row type="static">
+             <cell size="9" align="left">
+                 <literal>***</literal>
+                 <field length="35" nochar="*">E01OFMBNF</field>
+			     <field length="35" nochar="*">E01OFMBN1</field>
+			     <field length="35" nochar="*">E01OFMBN2</field>
+			     <literal>***</literal>
+			 </cell>   
+          </row>
+        </table>
+		
+        <!-- Monto del cheque en números -->
+		<text size="11" x="500" y="730">
+		    <literal>*</literal>
+			<field>E01OFMAMT</field>
+			<literal>*</literal>
+		</text>
+
+		<!-- Monto del cheque en letras -->
+
+        <table columns="1" x="145" y="705" width="400">
+          <row type="static">
+            <cell size="9" align="left">
+                 <literal>***</literal>
+                 <field>E01LETAMT</field>
+                 <literal>***</literal>
+            </cell>
+          </row>
+        </table>
+        
+		<!-- Concepto -->
+
+        <table columns="1" x="90" y="645" width="400">
+          <row type="static">
+            <cell size="9" align="left">
+                 <literal>*</literal>
+                 <field>E01OFMCO1</field>
+                 <literal>*</literal>
+            </cell>
+          </row>
+        </table>
+        
+        <!-- Primera copia del cheque -->
+        
+        <!-- Fecha del cheque -->
+        <table columns="1" x="435" y="495" width="260">
+        	<row type="static">
+ 				<cell type="date" size="10" align="left">
+ 					<format>dd 'de' MMMM 'de' yyyy</format>
+					<field>E01OFMEM1</field>
+					<field>E01OFMEM2</field>
+					<field>E01OFMEM3</field>
+ 				</cell>
+ 			</row>
+        </table>
+
+        <!-- Nombre del beneficiario -->
+		<table columns="1" x="140" y="450" width="350">
+          <row type="static">
+             <cell size="9" align="left">
+                 <literal>***</literal>
+                 <field length="35" nochar="*">E01OFMBNF</field>
+			     <field length="35" nochar="*">E01OFMBN1</field>
+			     <field length="35" nochar="*">E01OFMBN2</field>
+			     <literal>***</literal>
+			 </cell>    
+          </row>
+        </table>
+		
+        <!-- Monto del cheque en números -->
+		<text size="11" x="500" y="440">
+		    <literal>*</literal>
+			<field>E01OFMAMT</field>
+			<literal>*</literal>
+		</text>
+
+		<!-- Monto del cheque en letras -->
+
+        <table columns="1" x="145" y="415" width="400">
+          <row type="static">
+            <cell size="9" align="left">
+                 <literal>***</literal>
+                 <field>E01LETAMT</field>
+                 <literal>***</literal>
+            </cell>
+          </row>
+        </table>
+        
+		<!-- Concepto -->
+
+        <table columns="1" x="90" y="360" width="400">
+          <row type="static">
+            <cell size="9" align="left">
+                 <literal>*</literal>
+                 <field>E01OFMCO1</field>
+                 <literal>*</literal>
+            </cell>
+          </row>
+        </table>
+        
+        <!-- Segunda copia del cheque -->
+        
+        <!-- Fecha del cheque -->
+        <table columns="1" x="435" y="205" width="260">
+        	<row type="static">
+ 				<cell type="date" size="10" align="left">
+ 					<format>dd 'de' MMMM 'de' yyyy</format>
+					<field>E01OFMEM1</field>
+					<field>E01OFMEM2</field>
+					<field>E01OFMEM3</field>
+ 				</cell>
+ 			</row>
+        </table>
+
+        <!-- Nombre del beneficiario -->
+		<table columns="1" x="140" y="160" width="350">
+          <row type="static">
+             <cell size="9" align="left">
+                 <literal>***</literal>
+                 <field length="35" nochar="*">E01OFMBNF</field>
+			     <field length="35" nochar="*">E01OFMBN1</field>
+			     <field length="35" nochar="*">E01OFMBN2</field>
+			     <literal>***</literal>
+			 </cell>    
+          </row>
+        </table>
+		
+        <!-- Monto del cheque en números -->
+		<text size="11" x="500" y="150">
+		    <literal>*</literal>
+			<field>E01OFMAMT</field>
+			<literal>*</literal>
+		</text>
+
+		<!-- Monto del cheque en letras -->
+
+        <table columns="1" x="145" y="125" width="400">
+          <row type="static">
+            <cell size="9" align="left">
+                 <literal>***</literal>
+                 <field>E01LETAMT</field>
+                 <literal>***</literal>
+            </cell>
+          </row>
+        </table>
+        
+		<!-- Concepto -->
+
+        <table columns="1" x="90" y="70" width="400">
+          <row type="static">
+            <cell size="9" align="left">
+                 <literal>*</literal>
+                 <field>E01OFMCO1</field>
+                 <literal>*</literal>
+            </cell>
+          </row>
+        </table>
+        
+	</content>
+
+</page>
+</checkformat>

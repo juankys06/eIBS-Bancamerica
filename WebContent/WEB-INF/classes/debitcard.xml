@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkformat>
+<page size="LETTER" marginLeft="" marginRight="" marginTop="" marginBottom="">
+	<title>Tarjetas de Debito</title>
+	<content>
+		<text size="10" x="20" y="740">
+			<field>E01CCAPIN</field>
+		</text>
+	</content>		
+</page>
+</checkformat>

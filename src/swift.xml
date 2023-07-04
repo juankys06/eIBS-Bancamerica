@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE eIBSSwiftStructure [
+<!ELEMENT eIBSSwiftStructure (eIBSField+)>
+<!ELEMENT eIBSField (en,sp)>
+<!ATTLIST eIBSField
+Mandatory CDATA #REQUIRED
+>
+<!ATTLIST eIBSField
+Format CDATA #IMPLIED 
+>
+<!ATTLIST eIBSField
+Chars CDATA #REQUIRED
+>
+<!ATTLIST eIBSField
+Lines CDATA #REQUIRED
+>
+<!ATTLIST eIBSField
+id ID #REQUIRED
+>
+<!ELEMENT en (#PCDATA)>
+<!ELEMENT sp (#PCDATA)>
+]>
+<eIBSSwiftStructure>
+	<eIBSField id="id39C" Lines="4" Chars="35" Mandatory="NO">
+		<en>Additional Amount</en>
+		<sp>Montos Adicionales</sp>
+	</eIBSField>
+	<eIBSField id="id41D" Lines="4" Chars="35" Mandatory="NO">
+		<en>Available With ...</en>
+		<sp>Disponible Con ...</sp>
+	</eIBSField>
+	<eIBSField id="id42C" Lines="3" Chars="35" Mandatory="NO">
+		<en>Draft At ...</en>
+		<sp>Giros A ...</sp>
+	</eIBSField>
+	<eIBSField id="id42D" Lines="4" Chars="35" Mandatory="NO">
+		<en>Drawee Bank</en>
+		<sp>Banco Girado</sp>
+	</eIBSField>
+	<eIBSField id="id42M" Lines="4" Chars="35" Mandatory="NO">
+		<en>Mixed Payments</en>
+		<sp>Pagos Mixtos</sp>
+	</eIBSField>
+	<eIBSField id="id42P" Lines="4" Chars="35" Mandatory="NO">
+		<en>Deferred Payments</en>
+		<sp>Pagos Diferidos</sp>
+	</eIBSField>
+	<eIBSField id="id44D" Lines="6" Chars="65" Mandatory="NO">
+		<en>Period of Details</en>
+		<sp>Períodos de Detalles</sp>
+	</eIBSField>
+	<eIBSField id="id45A" Lines="100" Chars="65" Mandatory="NO"> 
+		<en>Description of Goods</en>
+		<sp>Descripción de la Mercancía</sp>
+	</eIBSField>
+	<eIBSField id="id46A" Lines="100" Chars="65" Mandatory="NO">
+		<en>Document Required</en>
+		<sp>Documentos Requeridos</sp>
+	</eIBSField>
+	<eIBSField id="id47A" Lines="100" Chars="65" Mandatory="NO"> 
+		<en>Additional Conditions</en>
+		<sp>Condiciones Adicionales</sp>
+	</eIBSField>
+	<eIBSField id="id48" Lines="4" Chars="35" Mandatory="NO"> 
+		<en>Period of Presentation</en>
+		<sp>Períodos de Presentación</sp>
+	</eIBSField>
+	<eIBSField id="id71B" Lines="6" Chars="35" Mandatory="NO"> 
+		<en>Other Charges</en>
+		<sp>Otros Cargos</sp>
+	</eIBSField>
+	<eIBSField id="id72" Lines="6" Chars="35" Mandatory="NO"> 
+		<en>Sender to Receiver Information</en>
+		<sp>Información Banco a Banco</sp>
+	</eIBSField>
+	<eIBSField id="id77A" Lines="20" Chars="35" Mandatory="NO">
+		<en>Reimbursement Bank</en>
+		<sp>Narrativa para el Banco Reembolsador</sp>
+	</eIBSField>
+	<eIBSField id="id78" Lines="12" Chars="65" Mandatory="NO">
+		<en>Bank to Bank Information</en>
+		<sp>Instrucciones para el Banco Pagador</sp>
+	</eIBSField>
+	<eIBSField id="id79" Lines="4" Chars="35" Mandatory="NO">
+		<en>Narrative</en>
+		<sp>Narrativa</sp>
+	</eIBSField>
+	<eIBSField id="id77C" Lines="150" Chars="65" Mandatory="NO">
+		<en>Collateral Details</en>
+		<sp>Detalles de las Garantías</sp>
+	</eIBSField>
+	<eIBSField id="id31C" Lines="1" Chars="6" Format="6!n" Mandatory="NO">
+		<en>Date of Issue</en>
+		<sp>Fecha de Emisión</sp>
+	</eIBSField>
+	<eIBSField id="id31D" Lines="1" Chars="35" Format="6!n29x" Mandatory="NO">
+		<en>Date and Place of Expiry</en>
+		<sp>Fecha y Lugar de Expiración</sp>
+	</eIBSField>
+	<eIBSField id="id32B" Lines="1" Chars="18" Format="3!a15d" Mandatory="YES">
+		<en>Currency Code, Amount</en>
+		<sp>Código de Moneda, Monto</sp>
+	</eIBSField>
+	<eIBSField id="id34A" Lines="1" Chars="24" Format="6!n3!a15d" Mandatory="NO">
+		<en>Total Amount Claimed</en>
+		<sp>Monto Total Reclamado</sp>
+	</eIBSField>
+</eIBSSwiftStructure>
